@@ -2,9 +2,6 @@
 远程智慧教室打卡
 
 
-## 原理
-参见[slvf](https://github.com/slvf)大佬的开源项目[BUAA-iClassSignIn](https://github.com/slvf/BUAA-iClassSignIn)
-
 ## 核心修改
 使用tkinter库做了GUI界面
 
