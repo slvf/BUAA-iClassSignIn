@@ -8,7 +8,7 @@ stu_id = ''
 stu_pwd = ''
 
 params = {
-    'service': 'https://iclass.buaa.edu.cn:8346/',
+    'service': 'https://iclass.buaa.edu.cn:8347/',
 }
 
 response = requests.get('https://sso.buaa.edu.cn/login', params=params)
@@ -60,7 +60,7 @@ else:
 
 
 # 获取用户id和sessionId，为查询课表和根据课表打卡做准备
-url = 'https://iclass.buaa.edu.cn:8346/app/user/login_buaa.action'
+url = 'https://iclass.buaa.edu.cn:8347/app/user/login_buaa.action'
 para = {
     'password': '',
     'phone': phone,
@@ -83,7 +83,7 @@ for i in range(120):
     date = today + datetime.timedelta(days=i)
     dateStr = date.strftime('%Y%m%d')
     # 查询课表
-    url = 'https://iclass.buaa.edu.cn:8346/app/course/get_stu_course_sched.action'
+    url = 'https://iclass.buaa.edu.cn:8347/app/course/get_stu_course_sched.action'
     para = {
         'dateStr': dateStr,
         'id': userId

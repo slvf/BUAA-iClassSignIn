@@ -10,7 +10,7 @@ import datetime
 def check_sign_status(student_id): 
 
     # 获取用户id和sessionId，为查询课表和根据课表打卡做准备
-    url = 'https://iclass.buaa.edu.cn:8346/app/user/login.action'
+    url = 'https://iclass.buaa.edu.cn:8347/app/user/login.action'
     para = {
         'password': '',
         'phone': student_id,
@@ -88,7 +88,7 @@ def check_sign_status(student_id):
 
         USER_ID = userId
         SESSION_ID = sessionId
-        COURSE_URL = 'https://iclass.buaa.edu.cn:8346/app/course/get_stu_course_sched.action'
+        COURSE_URL = 'https://iclass.buaa.edu.cn:8347/app/course/get_stu_course_sched.action'
             
         result = asyncio.run(main(USER_ID, SESSION_ID, COURSE_URL))
 

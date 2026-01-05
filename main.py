@@ -6,7 +6,7 @@ import datetime
 student_id = ''
 
 # 获取用户id和sessionId，为查询课表和根据课表打卡做准备
-url = 'https://iclass.buaa.edu.cn:8346/app/user/login.action'
+url = 'https://iclass.buaa.edu.cn:8347/app/user/login.action'
 para = {
     'password': '',
     'phone': student_id,
@@ -29,7 +29,7 @@ for i in range(120):
     date = today + datetime.timedelta(days=i)
     dateStr = date.strftime('%Y%m%d')
     # 查询课表
-    url = 'https://iclass.buaa.edu.cn:8346/app/course/get_stu_course_sched.action'
+    url = 'https://iclass.buaa.edu.cn:8347/app/course/get_stu_course_sched.action'
     para = {
         'dateStr': dateStr,
         'id': userId
